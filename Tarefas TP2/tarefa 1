@@ -1,0 +1,31 @@
+
+# Função 1: funcao1(n)
+def funcao1(n):
+    for i in range(n):
+        print(i)
+
+# Análise:
+# - O loop for executa n iterações, e cada iteração contém uma operação constante (print).
+# - Portanto, a complexidade de tempo é O(n).
+
+# Função 2: funcao2(n)
+def funcao2(n):
+    for i in range(n):
+        for j in range(n):
+            print(i, j)
+
+# Análise:
+# - O loop externo executa n iterações.
+# - O loop interno executa n iterações para cada iteração do loop externo, resultando em n * n iterações no total.
+# - Portanto, a complexidade de tempo é O(n²).
+
+# Função 3: funcao3(n)
+def funcao3(n):
+    if n <= 1:
+        return n
+    return funcao3(n - 1) + funcao3(n - 2)
+
+# Análise:
+# - Esta é uma implementação recursiva da sequência de Fibonacci.
+# - A cada chamada da função, duas chamadas recursivas são realizadas, criando uma árvore exponencial de chamadas.
+# - Portanto, a complexidade de tempo é O(2^n).
